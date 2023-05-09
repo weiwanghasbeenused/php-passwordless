@@ -5,7 +5,6 @@ require_once(__DIR__ . '/../../vendor/autoload.php');
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
 $dotenv->load();
-
 // PHP has no base64UrlEncode function, so let's define one that
 // does some magic by replacing + with -, / with _ and = with ''.
 // This way we can pass the string within URLs without

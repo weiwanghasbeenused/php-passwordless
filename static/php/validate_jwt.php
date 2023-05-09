@@ -6,7 +6,7 @@ use Carbon\Carbon;
 function validate_jwt($token = ''){
     $output = array();
     // get the local secret key
-    $secret = getenv('SECRET');
+    $secret = $_ENV['JWT_SECRET'];
 
     if (!$token) {
         $output['status'] = 'error';

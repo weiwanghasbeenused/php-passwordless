@@ -11,9 +11,9 @@ $auth_status = validate_jwt($token);
 
 if($auth_status['status'] == 'success')
 {
-    echo 'You have logged in successfully!';
+    echo 'You have logged in successfully! The session will expire in a minute.<br>';
     var_dump($auth_status['payload']);
-    /* wei: store cookie here */
+    /* wei: store cookie here. maybe refresh the lifetime whenever a request to the server is sent */
 }
 else if($auth_status['status'] == 'error')
 {

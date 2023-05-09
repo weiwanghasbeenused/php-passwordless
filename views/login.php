@@ -16,7 +16,7 @@ try{
 }
 catch(Exception $err)
 {
-    var_dump($err);
+    // var_dump($err);
 }
 if(!$stmt){
     exit('Error when connecting to mysql');

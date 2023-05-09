@@ -8,7 +8,7 @@
     use Mailgun\Mailgun;
 
     function mailgun($domain, $msg) {
-        $mailgun_client_id = getenv('MAILGUN_CLIENT_ID');
+        $mailgun_client_id = $_ENV['MAILGUN_CLIENT_ID'];
         if(!$mailgun_client_id) return false;
         try {
             $mg = Mailgun::create($mailgun_client_id);

@@ -4,8 +4,7 @@ require_once(__DIR__ . '/bootstrap.php');
 
 function generate_jwt($user_id, $exp=600){
     // get the local secret key
-    $secret = getenv('SECRET');
-
+    $secret = $_ENV['JWT_SECRET'];
     // Create the token header
     $header = json_encode([
         'typ' => 'JWT',
