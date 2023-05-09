@@ -1,0 +1,22 @@
+{
+    "name": "weiwang/php-passwordless",
+    "type": "project",
+    "require": {
+        "vlucas/phpdotenv": "^5.5",
+        "mailgun/mailgun-php": "^3.5",
+        "symfony/http-client": "^5.4",
+        "nyholm/psr7": "^1.8",
+        "nesbot/carbon": "^2.66"
+    },
+    "authors": [
+        {
+            "name": "wei",
+            "email": "wei@o-r-g.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
