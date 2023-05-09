@@ -11,7 +11,16 @@ $email = $_POST['email'];
 $db = db_connect('admin');
 /* check if user exists */
 $sql_getUser = 'SELECT id FROM `users` WHERE email = ? LIMIT 1';
-$stmt = $db->prepare($sql_getUser);
+try{
+    $stmt = $db->prepare($sql_getUser);
+}
+catch(Exception $err)
+{
+    var_dump($err);
+}
+if(!$stmt){
+    exit('Error when connecting to mysql');
+}
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result_getUser = $stmt->get_result()->fetch_assoc();
